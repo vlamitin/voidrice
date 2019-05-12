@@ -6,3 +6,7 @@ export PS1="\[$(tput bold)\]\[$(tput setaf 1)\][\[$(tput setaf 3)\]\u\[$(tput se
 
 [ -f "$HOME/.config/shortcutrc" ] && source "$HOME/.config/shortcutrc" # Load shortcut aliases
 [ -f "$HOME/.config/aliasrc" ] && source "$HOME/.config/aliasrc"
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/home/vlamitin/.sdkman"
+[[ -s "/home/vlamitin/.sdkman/bin/sdkman-init.sh" ]] && source "/home/vlamitin/.sdkman/bin/sdkman-init.sh"

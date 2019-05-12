@@ -8,3 +8,12 @@ image/png=img.desktop;
 image/jpeg=img.desktop;
 image/gif=img.desktop;
 application/rss+xml=rss.desktop
+x-scheme-handler/tg=telegramdesktop.desktop
+x-scheme-handler/webcal=google-chrome.desktop
+
+[Added Associations]
+image/png=img.desktop;
+video/x-flv=mpv.desktop;
+application/pdf=pdf.desktop;
+video/x-matroska=mpv.desktop;
+video/mp4=mpv.desktop;
