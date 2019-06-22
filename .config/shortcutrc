@@ -14,6 +14,7 @@ cfb="$EDITOR ~/.bashrc" \
 cfa="$EDITOR ~/.config/aliasrc" \
 cfz="$EDITOR ~/.zshrc" \
 cfv="$EDITOR ~/.config/nvim/init.vim" \
+cfr="$EDITOR ~/.config/ranger/rc.conf" \
 cfi="$EDITOR ~/.config/i3/config" \
 cfm="$EDITOR ~/.config/mutt/muttrc" \
 eb="$EDITOR ~/Documents/LaTeX/uni.bib" \

@@ -41,6 +41,7 @@ map cfb :e ~/.bashrc<CR>
 map cfa :e ~/.config/aliasrc<CR>
 map cfz :e ~/.zshrc<CR>
 map cfv :e ~/.config/nvim/init.vim<CR>
+map cfr :e ~/.config/ranger/rc.conf<CR>
 map cfi :e ~/.config/i3/config<CR>
 map cfm :e ~/.config/mutt/muttrc<CR>
 map eb :e ~/Documents/LaTeX/uni.bib<CR>

@@ -29,7 +29,9 @@
 !.config/newsboat/**
 !.config/nvim/
 !.config/nvim/init.vim
-!.config/sxiv/
+!.config/ranger/
+!.config/ranger/**
+!.config/sxiv/**
 !.config/sxiv/**
 !.config/vifm/
 !.config/vifm/**
