@@ -1,0 +1,4 @@
+#!/bin/sh
+# returns ip of host in local network
+ip route get 1 | awk '{print $7;exit}'
+

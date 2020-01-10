@@ -1,2 +1,7 @@
-keycode 1 = Caps_Lock
-keycode 58 = Escape
+# switch caps and esc
+# keycode 1 = Caps_Lock
+# keycode 58 = Escape
+
+# switch backwards
+# keycode 58 = Caps_Lock
+# keycode 1 = Escape

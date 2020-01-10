@@ -1,0 +1,3 @@
+#!/bin/bash
+i3lock -e -f -c 1d1d1d; sleep4; sudo -A systemctl suspend
+

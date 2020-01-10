@@ -1,0 +1,8 @@
+#!/bin/sh
+# Display current layout
+
+case $BLOCK_BUTTON in
+	1) notify-send "Use Alt + space to toggle layout";;
+esac
+
+xkb-switch | cut -c 1-2

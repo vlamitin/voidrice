@@ -1,0 +1,6 @@
+#!/bin/sh
+# generates pass with apg
+ifinstalled apg; \
+apg -a 1 -m 32 -n 1 -M NCL | xargs echo -n | xclip -sel clip ;\
+notify-send "password generated and copied to clipboard"
+

@@ -18,3 +18,4 @@ application/pdf=pdf.desktop;
 video/x-matroska=mpv.desktop;
 video/mp4=mpv.desktop;
 image/jpeg=img.desktop;
+application/vnd.adobe.flash.movie=google-chrome.desktop;

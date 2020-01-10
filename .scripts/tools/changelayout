@@ -1,0 +1,11 @@
+#!/bin/sh
+# Change layout and update i3block
+CURRENT_LOCALE=$(xkb-switch | cut -c 1-2)
+
+if [ "$CURRENT_LOCALE" == "us" ]; then
+  setxkbmap ru && notify-send "ru"
+else
+  setxkbmap us && notify-send "en"
+fi
+
+pkill -SIGRTMIN+13 i3blocks

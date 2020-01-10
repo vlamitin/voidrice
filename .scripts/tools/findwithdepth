@@ -1,0 +1,12 @@
+#!/bin/sh
+[ -z "$1" ] && echo "Give text to search as 1st argument" && exit;\
+
+SEARCH_DEPTH=1
+
+if [ -n "$2" ]; then
+	SEARCH_DEPTH=$2
+fi
+
+
+find . -maxdepth $SEARCH_DEPTH -type f -exec grep -l "$1" {} \;
+

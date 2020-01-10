@@ -1,0 +1,3 @@
+#!/bin/sh
+# Change layout and update i3block
+firefox --ProfileManager
