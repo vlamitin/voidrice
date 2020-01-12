@@ -1,0 +1,9 @@
+super + alt + t
+	translateselected
+
+super + alt + shift + t
+	translateclip
+
+#super + n
+#	savetranslated
+

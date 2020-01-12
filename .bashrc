@@ -18,3 +18,5 @@ export NVM_DIR="$HOME/.nvm"
 
 # for fzf. Requires fd!
 export FZF_DEFAULT_COMMAND='ifinstalled fd && fd --hidden --follow --no-ignore --exclude ".git" --exclude "node_modules"'
+
+source /home/vlamitin/.config/broot/launcher/bash/br

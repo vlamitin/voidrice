@@ -107,6 +107,9 @@ set clipboard=unnamedplus
 " Run xrdb whenever Xdefaults or Xresources are updated.
 	autocmd BufWritePost *Xresources,*Xdefaults !xrdb %
 
+" Update binds when sxktdrc updates
+	autocmd BufWritePost *sxhkdrc !killall sxhkd; setsid sxhkd &
+
 " Navigating with guides
 	inoremap <leader><leader> <Esc>/<++><Enter>"_c4l
 	vnoremap <leader><leader> <Esc>/<++><Enter>"_c4l
