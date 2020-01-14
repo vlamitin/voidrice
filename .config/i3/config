@@ -109,7 +109,8 @@ bindsym $mod+t			split toggle
 bindsym $mod+Shift+t		gaps inner current set 15; gaps outer current set 15
 # bindsym $mod+Mod1+t		exec --no-startup-id translateselected
 # bindsym $mod+Mod1+Shift+t	exec --no-startup-id translateclip
-bindsym $mod+n		exec --no-startup-id savetranslated
+bindsym $mod+n		exec --no-startup-id savetranslated_from_clip
+bindsym $mod+m		exec --no-startup-id savetranslated_from_phrase
 
 bindsym $mod+y			exec $term -e calcurse -D ~/.config/calcurse
 bindsym $mod+Shift+y		exec --no-startup-id i3resize left

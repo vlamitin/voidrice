@@ -1,0 +1,4 @@
+#!/bin/sh
+# saves translation to anki
+xsel -o | xargs -0 savetranslated
+

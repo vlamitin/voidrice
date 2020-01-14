@@ -1,0 +1,4 @@
+#!/bin/sh
+# saves translation to anki
+xsel -o | xargs -0 node ~/projects/grown-up-english-vocabulary-learning/build/src/cli-view/index.js get-phrase --text | dmenu -l 10 | tr -d '\n' |  xargs -0 savetranslated
+

@@ -1,7 +1,9 @@
 #!/bin/sh
-# saves translation to anki
-notify-send "hello!"
-filename="$(cat /dev/urandom | env LC_CTYPE=C tr -cd 'a-f0-9' | head -c 32)"
+# translates text; pastes text and translation to vim; saves it to anki
+[ -z "$1" ] && echo "Give text to translate" && exit 1;\
+text=$1; \
+echo "preparing to translate '$1'";\
+filename="tmp_$(cat /dev/urandom | env LC_CTYPE=C tr -cd 'a-f0-9' | head -c 32)";\
 
 function checkanki {
     curl localhost:8765 -X POST -d "{\"action\": \"deckNames\", \"version\": 6}" || { notify-send "anki desktop not started or ankiconnect not installed" && exit 1; }
@@ -11,12 +13,12 @@ function addnoteanki {
     curl localhost:8765 -X POST -d "{\"action\":\"addNote\",\"version\":6,\"params\":{\"note\":{\"deckName\":\"vlamitin_desk\",\"modelName\":\"Basic\",\"fields\":{\"Front\":\"$(head -n 1 $filename)\",\"Back\":\"$(tail -n 1 $filename)\"},\"options\":{\"allowDuplicate\":false},\"tags\":[]}}}" 2>&1 | xargs -0 notify-send
 }
 
-function savetranslated {
+function save_translated {
     touch $filename
-    xsel -o | xargs -0 node ~/projects/grown-up-english-vocabulary-learning/build/src/cli-view/index.js translate --text | tail -n 2 > $filename
+    node ~/projects/grown-up-english-vocabulary-learning/build/src/cli-view/index.js translate --text "$text" | tail -n 2 > $filename
     st vim $filename
     addnoteanki
     rm $filename
 }
 
-checkanki && savetranslated
+checkanki && save_translated
