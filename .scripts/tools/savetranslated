@@ -6,11 +6,11 @@ echo "preparing to translate '$1'";\
 filename="tmp_$(cat /dev/urandom | env LC_CTYPE=C tr -cd 'a-f0-9' | head -c 32)";\
 
 function checkanki {
-    curl localhost:8765 -X POST -d "{\"action\": \"deckNames\", \"version\": 6}" || { notify-send "anki desktop not started or ankiconnect not installed" && exit 1; }
+    curl localhost:8765 -s -X POST -d "{\"action\": \"deckNames\", \"version\": 6}" || { notify-send "anki desktop not started or ankiconnect not installed" && exit 1; }
 }
 
 function addnoteanki {
-    curl localhost:8765 -X POST -d "{\"action\":\"addNote\",\"version\":6,\"params\":{\"note\":{\"deckName\":\"vlamitin_desk\",\"modelName\":\"Basic\",\"fields\":{\"Front\":\"$(head -n 1 $filename)\",\"Back\":\"$(tail -n 1 $filename)\"},\"options\":{\"allowDuplicate\":false},\"tags\":[]}}}" 2>&1 | xargs -0 notify-send
+    curl localhost:8765 -s -X POST -d "{\"action\":\"addNote\",\"version\":6,\"params\":{\"note\":{\"deckName\":\"vlamitin_desk\",\"modelName\":\"Basic\",\"fields\":{\"Front\":\"$(head -n 1 $filename)\",\"Back\":\"$(tail -n 1 $filename)\"},\"options\":{\"allowDuplicate\":false},\"tags\":[]}}}" 2>&1 | xargs -0 notify-send
 }
 
 function save_translated {
