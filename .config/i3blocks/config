@@ -30,6 +30,9 @@ signal=8
 interval=18000
 signal=5
 
+[screen_keyboard]
+interval=once
+
 #[mailbox]
 #label=📬
 #interval=180
